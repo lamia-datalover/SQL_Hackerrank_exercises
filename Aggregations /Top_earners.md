@@ -3,5 +3,5 @@
 
 # Solution:
 ```bash
-select MAX(salary*months) as each_salary, Count(*) as max_earners from employee where (salary*months) = (select MAX(salary*months) from employee);
+select MAX(salary*months) , Count(employee_id)  from employee where (salary*months) = (select MAX(salary*months) from employee);
 ```
